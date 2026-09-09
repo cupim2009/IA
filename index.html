@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Missão IA - Quiz sobre Inteligência Artificial"
+    >
+
+    <title>MISSÃO IA | Operação Inteligência Artificial</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <header class="topbar">
+
+        <div class="logo">
+            <span class="logo-icon">◈</span>
+            <span>MISSÃO<span class="blue">.IA</span></span>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            SISTEMA ONLINE
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- TELA INICIAL -->
+
+        <section id="start-screen" class="screen active">
+
+            <div class="hero">
+
+                <div class="classification">
+                    CLASSIFICAÇÃO // NÍVEL ALFA
+                </div>
+
+                <h1>
+                    OPERAÇÃO
+                    <span>INTELIGÊNCIA ARTIFICIAL</span>
+                </h1>
+
+                <p class="hero-text">
+                    O futuro precisa de especialistas.
+                    Teste seus conhecimentos, enfrente 20 desafios
+                    e descubra se você está preparado para dominar
+                    o universo da Inteligência Artificial.
+                </p>
+
+                <div class="mission-box">
+
+                    <div class="mission-item">
+                        <span class="mission-number">20</span>
+                        <span>DESAFIOS</span>
+                    </div>
+
+                    <div class="mission-line"></div>
+
+                    <div class="mission-item">
+                        <span class="mission-number">01</span>
+                        <span>MISSÃO</span>
+                    </div>
+
+                    <div class="mission-line"></div>
+
+                    <div class="mission-item">
+                        <span class="mission-number">∞</span>
+                        <span>CONHECIMENTO</span>
+                    </div>
+
+                </div>
+
+                <button id="start-btn" class="main-button">
+                    INICIAR MISSÃO
+                    <span>→</span>
+                </button>
+
+                <p class="warning">
+                    ⚠ ATENÇÃO: algumas perguntas podem exigir raciocínio.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELA DO QUIZ -->
+
+        <section id="quiz-screen" class="screen">
+
+            <div class="quiz-container">
+
+                <div class="quiz-header">
+
+                    <div>
+                        <span class="small-label">MISSÃO</span>
+                        <h2>DESAFIO IA</h2>
+                    </div>
+
+                    <div class="question-counter">
+                        <span id="current-question">01</span>
+                        <span class="separator">/</span>
+                        <span>20</span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span>PROGRESSO DA MISSÃO</span>
+                        <span id="progress-percent">5%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="progress"
+                            class="progress"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="question-card">
+
+                    <div class="question-tag">
+                        QUESTÃO <span id="question-number">01</span>
+                    </div>
+
+                    <h3 id="question">
+                        Carregando pergunta...
+                    </h3>
+
+                    <div id="answers" class="answers"></div>
+
+                </div>
+
+
+                <div class="quiz-footer">
+
+                    <span id="score-display">
+                        PONTUAÇÃO: 0
+                    </span>
+
+                    <span>
+                        ESCOLHA UMA ALTERNATIVA
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELA FINAL -->
+
+        <section id="result-screen" class="screen">
+
+            <div class="result-container">
+
+                <div class="result-icon">
+                    ✓
+                </div>
+
+                <span class="small-label">
+                    MISSÃO FINALIZADA
+                </span>
+
+                <h2 id="result-title">
+                    MISSÃO CONCLUÍDA
+                </h2>
+
+                <p id="result-message">
+                    Analisando seu desempenho...
+                </p>
+
+
+                <div class="score-panel">
+
+                    <span class="score-label">
+                        SUA PONTUAÇÃO
+                    </span>
+
+                    <div class="final-score">
+                        <span id="final-score">0</span>
+                        <small>/ 20</small>
+                    </div>
+
+                    <div class="score-bar">
+                        <div id="score-progress"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="rank">
+
+                    <span>NÍVEL DE AGENTE</span>
+
+                    <strong id="rank">
+                        NOVATO
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="restart-btn"
+                    class="main-button"
+                >
+                    NOVA MISSÃO
+                    <span>↻</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            MISSÃO IA // PROJETO EDUCACIONAL
+        </p>
+
+        <p>
+            Desenvolvido para estudo de JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
